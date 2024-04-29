@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\StudentInfoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[StudentController::class , 'index'])->name('student.list');
+ Route::get('/',[StudentController::class , 'index'])->name('student.list');
+
+Route::get('/one' ,[StudentInfoController::class , 'index']);
